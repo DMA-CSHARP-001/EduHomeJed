@@ -1,0 +1,23 @@
+﻿@model EduHome.Models.SliderItem
+<link href="c:\users\jalil\desktop\jed\dma\eduhomejed\eduhome\wwwroot\lib\bootstrap\dist\css\bootstrap.min.css" rel="stylesheet" />
+<link href="c:\users\jalil\desktop\jed\dma\eduhomejed\eduhome\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.min.css" rel="stylesheet" />
+<link href="c:\users\jalil\desktop\jed\dma\eduhomejed\eduhome\wwwroot\lib\bootstrap\dist\css\bootstrap.rtl.css" rel="stylesheet" />
+<link href="c:\users\jalil\desktop\jed\dma\eduhomejed\eduhome\wwwroot\lib\bootstrap\dist\css\bootstrap.css" rel="stylesheet" />
+
+<div class="container">
+    <form asp-action="TempPost" asp-controller="Temporary">
+        <div class="form-group">
+            <label for="exampleInputImage1">Image Path</label>
+            <input asp-for="@Model.ImagePath" type="text" class="form-control" id="exampleInputImage1" placeholder="Enter image path">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputTitle1">Title</label>
+            <input asp-for="@Model.Title" type="text" class="form-control" id="exampleInputTitle1" placeholder="Enter slider title">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputDesc1">Description</label>
+            <input asp-for="@Model.Description" type="text" class="form-control" id="exampleInputDesc1" placeholder="Enter slider description">
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>

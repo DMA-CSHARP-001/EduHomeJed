@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<EduHomeDbContext>(opt =>
 {
-    opt.UseSqlServer(builder.Configuration.GetConnectionString("Default"));
+    opt.UseSqlServer(builder.Configuration.GetConnectionString("Jalil"));
 });
 var app = builder.Build();
 

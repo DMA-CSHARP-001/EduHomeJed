@@ -1,12 +1,23 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using EduHome.Data;
+using EduHome.Models;
+using Microsoft.AspNetCore.Mvc;
 
 namespace EduHome.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        EduHomeDbContext _context;
+
+		public HomeController(EduHomeDbContext context)
+		{
+			_context = context;
+		}
+
+		public IActionResult Index()
         {
-            return View();
+            List<SliderItem> list = _context.SliderItems.ToList();
+
+            return View(list);
         }
 
         public IActionResult About() 
