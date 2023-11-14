@@ -17,6 +17,7 @@ namespace EduHome.Controllers
         {
             List<SliderItem> list = _context.SliderItems.ToList();
 
+
             return View(list);
         }
 
